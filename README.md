@@ -10,5 +10,6 @@
     pillow
     time
     os
+    json
     numpy
     tensorflow
