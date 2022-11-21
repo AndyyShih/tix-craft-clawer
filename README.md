@@ -4,3 +4,11 @@
     先從擴充功能中增加EditThisCoockie，接著登入拓元之後，從擴充功能中找到
     EditThisCoockie選擇匯出，建立一個json檔貼上，留下name跟value即可。
     注意:Session的有效期限約莫一天
+
+##使用的套件
+    selenium
+    pillow
+    time
+    os
+    numpy
+    tensorflow
