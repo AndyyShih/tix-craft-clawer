@@ -3,7 +3,13 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from PIL import Image
 import time
+import os
 
+if not os.path.isdir("./tmp"):
+    os.mkdir("./tmp")
+
+if not os.path.isdir("./captcha_img"):
+    os.mkdir("./captcha_img")
 
 for i in range(0,5):#抓取張數可自行調整
 #開啟瀏覽器
