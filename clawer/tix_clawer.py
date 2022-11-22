@@ -12,6 +12,9 @@ import numpy as np
 import os
 import transfer
 
+if not os.path.isdir("./target_captcha"):
+    os.mkdir("./target_captcha")
+
 with open('cookie_tix.json') as j_file:
     cookies = json.load(j_file)
     
@@ -60,7 +63,7 @@ agree.click()
 scroll_width = driver.execute_script('return document.body.parentNode.scrollWidth')
 scroll_height = driver.execute_script('return document.body.parentNode.scrollHeight')
 driver.set_window_size(scroll_width,scroll_height)
-driver.save_screenshot('./target/tmp.png')
+driver.save_screenshot('./target_captcha/tmp.png')
 
 element = driver.find_element(By.ID,'yw0')
 left = element.location['x']

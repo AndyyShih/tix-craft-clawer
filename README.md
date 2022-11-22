@@ -5,9 +5,6 @@
     EditThisCoockie選擇匯出，建立一個json檔貼上，留下name跟value即可。
     注意:Session的有效期限約莫一天
 
-## github不能push空的資料夾
-    code中的資料夾都要自己建立
-
 ## 使用的套件
     selenium
     pillow
