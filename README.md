@@ -13,3 +13,6 @@
     json
     numpy
     tensorflow
+
+## 仿生驗證碼
+    11/28新增驗證碼仿生程式
