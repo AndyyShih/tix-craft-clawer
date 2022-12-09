@@ -31,10 +31,10 @@ def getCaptchaText(num):
 
 #開啟CSV
 #csv_file = open(r'./fake_captcha_img/fake_img.csv','w',encoding='utf-8',newline='')
-csv_file = pd.read_csv('./fake_captcha_img/fake_img.csv')
+csv_file = pd.read_csv('./csv_file/fake_img.csv')
 list = []
 
-for i in range(0,100):
+for i in range(0,40000):
     #創建空白畫布
     captcha_img = Image.new('RGB',(120,100),'#349cd8')
     #創建畫筆
@@ -62,7 +62,7 @@ for i in range(0,100):
     #寫入圖片
     drawer.text((x,y),captcha,font=fonts)
     #儲存圖片
-    captcha_img.save(f'./fake_captcha_img/{i}.png')
+    captcha_img.save(f'./captcha_img/{i}.png')
     
     list.append([i , captcha])
 
@@ -74,7 +74,7 @@ for i in range(0,100):
     
 #寫入CSV
 data = pd.DataFrame(list , columns=['index','captcha'])
-data.to_csv('./fake_captcha_img/fake_img.csv', index=False)
+data.to_csv('./csv_file/fake_img.csv', index=False)
 
 #關閉CSV
 #csv_file.close()
